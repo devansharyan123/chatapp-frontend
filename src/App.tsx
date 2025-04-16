@@ -1,14 +1,19 @@
-import { useState } from 'react'
-import './App.css'
+
 import JoiningRoom from './pages/JoiningRoom'
 import ChatRoom from './pages/chatRoom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <ChatRoom/>
+      <BrowserRouter>
+        <Routes>
+        <Route path='/' element={<JoiningRoom />} />
+        <Route path='/room' element={<ChatRoom />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
