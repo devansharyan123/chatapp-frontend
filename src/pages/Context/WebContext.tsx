@@ -11,11 +11,11 @@ export const WebSocketProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         socketRef.current = new WebSocket('ws://localhost:8080');
 
         socketRef.current.onopen = () => {
-            console.log("Socket connected")
+            console.log("Socket connected gandu")
         }
 
         socketRef.current.onclose = () => {
-            console.log("Socket disconnected")
+            console.log("Socket disconnected gandu")
         }
 
         return () => {
